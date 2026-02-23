@@ -1,6 +1,5 @@
-diff --color -Naur a/debian/control.in b/debian/control.in
---- a/debian/control	2024-10-01 08:34:50.079536008 +0000
-+++ b/debian/control	2024-08-12 10:29:47.000000000 +0000
+--- a/debian/control	2026-02-23 13:15:16.114881165 +0100
++++ b/debian/control	2026-02-23 13:18:07.149042906 +0100
 @@ -3,6 +3,7 @@
  Priority: optional
  Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
@@ -9,15 +8,15 @@ diff --color -Naur a/debian/control.in b/debian/control.in
  Build-Depends: dpkg-dev (>= 1.22.5), debhelper-compat (= 13),
    po-debconf, bash-completion,
    supermin (>= 5.2.2-4~),
-@@ -46,7 +47,6 @@
-   libfuse-dev, fuse,
-   libglib2.0-dev, gjs [!s390x !armel] <!nocheck>, gobject-introspection, gobject-introspection-bin, libgirepository1.0-dev,
+@@ -53,7 +54,6 @@
+   libglib2.0-dev, gjs [!s390x !armel] <!nocheck>,
+   gobject-introspection (>= 1.80), gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev,
    libgtk-3-dev,
 -  db-util,
    netpbm, icoutils,
    po4a,
    flex, bison,
-@@ -184,6 +184,7 @@
+@@ -189,6 +189,7 @@
  Architecture: linux-any
  Multi-Arch: same
  Pre-Depends: ${misc:Pre-Depends}
@@ -25,10 +24,10 @@ diff --color -Naur a/debian/control.in b/debian/control.in
  Depends: ${shlibs:Depends}, ${misc:Depends},
    supermin (>= 5.2.2-4~),
    qemu-system-arm [armel armhf arm64],
-@@ -193,7 +194,6 @@
-   qemu-system-sparc [sparc],
-   qemu-system-x86 [i386 amd64],
+@@ -202,7 +203,6 @@
    qemu-utils,
+   ipxe-qemu [armel armhf arm64 mips mipsel mips64 mips64el riscv64 powerpc ppc64 ppc64el spearc sparc64 loong64],
+   seabios [powerpc ppc64 ppc64el],
 -  db-util,
    icoutils,
    netpbm,
