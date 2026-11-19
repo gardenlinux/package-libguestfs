@@ -1,2 +1,4 @@
+# 1.60.1-2gl1 is custom built to build the arm packages as well
+# based on 1.60.1-2gl0 tag and manually set to latest, next upstream release should work out of the box
 apt_src libguestfs
 apply_patches
